@@ -4,4 +4,4 @@
 + ### 身份鉴别
 在“开始->管理工具->本地安全策略“中即可找到，2012中左下角的管理界面打开后，在右上角的工具中可以看到。
 
-![本地安全策略](https://github.com/Perfect-lawrence/Linux/master/imgs/p01.jpg)
+![本地安全策略](https://github.com/Perfect-lawrence/Linux/master/imgs/p_01.jpg)
