@@ -1,0 +1,17 @@
+http://npm.taobao.org/mirrors/chromedriver
+root@lenmomDesktop Downloads]# rpm -ivh google-chrome-stable_current_x86_64.rpm 
+warning: google-chrome-stable_current_x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 7fac5991: NOKEY
+error: Failed dependencies:
+    libXss.so.1()(64bit) is needed by google-chrome-stable-67.0.3396.87-1.x86_64
+    libappindicator3.so.1()(64bit) is needed by google-chrome-stable-67.0.3396.87-1.x86_64
+    libnss3.so(NSS_3.22)(64bit) is needed by google-chrome-stable-67.0.3396.87-1.x86_64
+    libssl3.so(NSS_3.28)(64bit) is needed by google-chrome-stable-67.0.3396.87-1.x86_64
+
+针对错误消息中的每个依赖包,执行命令repoquery --nvr --whatprovides   <依赖文件>,安装输出包, such as:
+
+[root@lenmomDesktop Downloads]# repoquery --nvr --whatprovides  libappindicator3.so.1
+libappindicator-gtk3-12.10.0-13.el7
+[root@lenmomDesktop Downloads]# yum install -y libappindicator-gtk3-12.10.0-13.el7
+
+
+yum install lsb libXScrnSaver liberation-fonts.noarch liberation-fonts-common.noarch libappindicator-gtk3 libdbusmenu libdbusmenu-gtk3 libindicator-gtk3   
